@@ -19,7 +19,7 @@ module Jekyll
 </ul>
 
 <ul id="<%= uuid %>" class="uk-switcher uk-margin">
-<% environment['codetabs'].each_with_index do |(key, _), index| %>
+<% environment['codetabs'].each_with_index do |(_, value), index| %>
 	<li<%= index == 0 ? ' class="uk-active"' : ''%>><%= key %></li>
 <% end %>
 </ul>
