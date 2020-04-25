@@ -19,8 +19,8 @@ module Jekyll
 </ul>
 
 <ul id="<%= uuid %>" class="uk-switcher uk-margin">
-<% environment['codetabs'].each do |_, value| %>
-	<li<%= index == 0 ? ' class="uk-active"' : ''%>><%= value %></li>
+<% environment['codetabs'].each_with_index do |(key, _), index| %>
+	<li<%= index == 0 ? ' class="uk-active"' : ''%>><%= key %></li>
 <% end %>
 </ul>
 EOF
