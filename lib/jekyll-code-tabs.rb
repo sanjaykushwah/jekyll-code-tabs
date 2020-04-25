@@ -12,7 +12,7 @@ module Jekyll
 
         uuid = SecureRandom.uuid
 				template = ERB.new <<-EOF
-<ul class="uk-tab" data-uk-switcher="{connect:'#<%= uuid %>'}">
+<ul class="uk-tab" data-uk-switcher="<%= uuid %>">
 <% environment['codetabs'].each_with_index do |(key, _), index| %>
 	<li<%= index == 0 ? ' class="uk-active"' : ''%>><a href="#"><%= key %></a></li>
 <% end %>
